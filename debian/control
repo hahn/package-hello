@@ -1,0 +1,18 @@
+Source: package-hello
+Section: unknown
+Priority: optional
+Maintainer: Hanhan <matcherapy@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+Standards-Version: 4.7.2
+Vcs-Git: git@github.com:hahn/package-hello.git
+Vcs-Browser: https://github.com/hahn/package-hello.git
+
+Package: package-hello
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: Package Hello
+ Hello, World!
