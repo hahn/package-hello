@@ -1,9 +1,0 @@
-Package: package-hello
-Version: 0.0.1-1
-Architecture: amd64
-Maintainer: Hanhan <matcherapy@gmail.com>
-Installed-Size: 9
-Section: unknown
-Priority: optional
-Description: Package Hello
- Hello, World!
