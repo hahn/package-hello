@@ -1,23 +1,20 @@
-prefix = /usr/local
+prefix = /usr
 
-all: src/hello
+CC = gcc
+CFLAGS = -Wall -O2
 
-src/hello: src/hello.c
-	@echo "CFLAGS=$(CFLAGS)" | \
-		fold -s -w 70 | \
-		sed -e 's/^/# /'
-	$(CC) $(CPPFLAGS) $(CFLAGS) $(LDCFLAGS) -o $@ $^
+all: hello
 
-install: src/hello
-	install -D src/hello \
-		$(DESTDIR)$(prefix)/bin/hello
+hello: src/hello.c
+	$(CC) $(CFLAGS) -o $@ $^
+
+install: hello
+	install -m 755 -D hello $(DESTDIR)$(prefix)/bin/hello
 
 clean:
-	-rm -f src/hello
-
-distclean: clean
+	rm -f hello *.o
 
 uninstall:
-	-rm -f $(DESTDIR)$(prefix)/bin/hello
+	rm -f $(prefix)/bin/hello
 
-.PHONY: all install clean distclean uninstall
+.PHONY: all install clean uninstall

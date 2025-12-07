@@ -1,5 +1,6 @@
-package-hello (0.0.1-1) UNRELEASED; urgency=medium
+package-hello (0.0.1-2) UNRELEASED; urgency=medium
 
   * Initial release.
+  * update makefile
 
- -- Hanhan <matcherapy@gmail.com> Sun, 07 Dec 2025 22:10:47 +0700
+ -- Hanhan <matcherapy@gmail.com>  Sun, 07 Dec 2025 23:50:44 +0700
